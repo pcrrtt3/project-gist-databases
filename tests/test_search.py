@@ -1,9 +1,10 @@
 from datetime import datetime
 from gists_database.search import search_gists
+import sqlite3
 
 from .fixtures import populated_gists_database as db
 
-
+#db=sqlite3.connect('c:/Users/pcrrt/OneDrive/Documents/GitHub/project-gist-databases/tests/populated_gists_database.db')
 def test_search_without_parameters_returns_all_gists(db):
     gists = search_gists(db)
     assert len(gists) == 7

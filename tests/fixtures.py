@@ -18,7 +18,6 @@ def clean_gists_database():
     db.close()
     os.remove(TESTING_DATABASE_PATH)
 
-
 @pytest.fixture()
 def populated_gists_database():
     db = sqlite3.connect(POPULATED_DATABASE_PATH)
